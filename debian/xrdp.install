@@ -1,0 +1,5 @@
+debian/socksetup                usr/share/xrdp/
+debian/startwm.sh               etc/xrdp/
+debian/xrdp.ini                 etc/xrdp/
+debian/50-hamonikr-xrdp.pkla    etc/polkit-1/localauthority/50-local.d/
+debian/hamonikr.bmp             usr/share/xrdp/

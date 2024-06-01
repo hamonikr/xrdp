@@ -1,0 +1,27 @@
+[Netowrkmanager Allow]
+Identity=unix-user:*
+Action=org.freedesktop.Flatpak.appstream-update;org.freedesktop.NetworkManager.network-control
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+
+[Allow Colord all Users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+
+[Localectl Allow]
+Identity=unix-user:*
+Action=org.freedesktop.locale1.*
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+
+[timedate set-local-rtc Allow]
+Identity=unix-user:*
+Action=org.freedesktop.timedate1.*
+ResultAny=no
+ResultInactive=no
+ResultActive=yes

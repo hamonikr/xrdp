@@ -1,0 +1,6 @@
+xrdp (0.10.0-1hamonikr1) jammy; urgency=medium
+
+  * Release for HamoniKr 7.0
+   - Based latest upstream 0.10.0
+
+  -- HamoniKR <pkg@hamonikr.org>  Sat, 01 Jun 2024 08:35:59 +0900

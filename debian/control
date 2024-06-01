@@ -1,0 +1,56 @@
+Source: xrdp
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Uploaders:
+ Dominik George <natureshadow@debian.org>,
+ Andreas Tille <tille@debian.org>,
+ Mike Gabriel <sunweaver@debian.org>,
+ Thorsten Glaser <tg@mirbsd.de>,
+Section: net
+Priority: optional
+Build-Depends:
+ autoconf (>= 2.59),
+ automake (>= 1.6),
+ check,
+ debhelper-compat (= 12),
+ libfuse-dev [!hurd-any],
+ libjpeg-dev,
+ libopus-dev,
+ libpam0g-dev,
+ libssl-dev,
+ libtool,
+ libx11-dev,
+ libxfixes-dev,
+ libxrandr-dev,
+ libcmocka-dev,
+ nasm [amd64 hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386],
+ openssl,
+ pkg-config,
+ systemd [linux-any],
+Homepage: http://www.xrdp.org/
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Vcs-Browser: https://salsa.debian.org/debian-remote-team/xrdp
+Vcs-Git: https://salsa.debian.org/debian-remote-team/xrdp.git
+
+Package: xrdp
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends:
+ adduser,
+ lsb-base (>= 3.0-6),
+ ssl-cert,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ fuse [!hurd-any],
+ xorgxrdp,
+ tigervnc-standalone-server,
+ tigervnc-xorg-extension,
+Suggests:
+ guacamole,
+Conflicts: xrdp (< 0.10.0)
+Replaces: xrdp  (< 0.10.0)
+Description: Hamonikr customized RDP server
+ This is a customized version of the XRDP server for the 
+ HamoniKR OS.
