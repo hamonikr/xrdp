@@ -51,6 +51,9 @@ if [ ! "$DISPLAY" = ":0" ]; then
 
     # 104 키보드 레이아웃 처리
     if [ "$KEYBOARD_LAYOUT" = "kr" ]; then
+		localectl set-keymap us || true
+		localectl --no-convert set-x11-keymap kr pc105 kr106	
+		
         xmodmap -e 'keycode 122 = Hangul'
         xmodmap -e 'keycode 121 = Hangul_Hanja'
     fi

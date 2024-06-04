@@ -1,3 +1,10 @@
+xrdp (0.10.0-1hamonikr2) jammy; urgency=medium
+
+  * Fixed bugs
+   - Removed force keyboard setting in postinst
+
+  -- HamoniKR <pkg@hamonikr.org>  Tue, 04 Jun 2024 09:30:43 +0900
+
 xrdp (0.10.0-1hamonikr1) jammy; urgency=medium
 
   * Release for HamoniKr 7.0

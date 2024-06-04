@@ -53,12 +53,6 @@ configure)
 		adduser xrdp ssl-cert
 	)
 
-	# For Korean Keyboard
-	if [ -f "/usr/bin/localectl" ]; then
-		localectl set-keymap us || true
-		localectl --no-convert set-x11-keymap kr pc105 kr106
-	fi
-
 	test -e /etc/xrdp/km-e0010412.ini || xrdp-genkeymap /etc/xrdp/km-e0010412.ini
 
 	;;
