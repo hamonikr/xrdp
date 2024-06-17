@@ -1,7 +1,6 @@
 ## Remote Desktop Access for HamoniKR
 
- * 이 패키지가 지원되는 버전은 하모니카 6.0 이후 
- * xrdp 0.10.0 버전에서 하모니카 OS 환경에 맞게 패치한 버전입니다.
+ * 최신 xrdp 0.10.0 버전 기반으로 하모니카 OS 환경에 맞게 패치한 버전입니다.
 
 ![xrdp](./xrdp.png)
 
