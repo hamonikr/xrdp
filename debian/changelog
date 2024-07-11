@@ -1,3 +1,10 @@
+xrdp (0.10.0-1hamonikr5) stable; urgency=medium
+
+  * Release for paektu arm64
+   - No changes
+
+  -- HamoniKR <pkg@hamonikr.org>  Fri, 12 Jul 2024 03:22:04 +0900
+
 xrdp (0.10.0-1hamonikr4) stable; urgency=medium
 
   * Release for paektu
