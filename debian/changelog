@@ -1,3 +1,9 @@
+xrdp (0.10.0-1hamonikr6) stable; urgency=medium
+
+  * If there is no X, skip the xrdp-genkeymap command.
+
+  -- HamoniKR <pkg@hamonikr.org>  Fri, 09 Aug 2024 10:18:55 +0900
+
 xrdp (0.10.0-1hamonikr5) stable; urgency=medium
 
   * Release for paektu arm64

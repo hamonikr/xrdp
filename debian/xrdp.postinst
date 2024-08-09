@@ -2,26 +2,6 @@
 
 set -e
 
-# This maintainer script can be called the following ways:
-#
-# * new-postinst "configure" [$most_recently_configured_version]
-# The package is unpacked; all dependencies are unpacked and, when there
-# are no circular dependencies, configured.
-#
-# * old-postinst "abort-upgrade" $new_version
-# * old-postinst "abort-remove"
-# * conflictors-postinst "abort-remove" "in-favour" $new_package
-#	$new_version
-# * deconfigureds-postinst "abort-deconfigure" "in-favour"
-#	$failed_install_package $fip_version		# new-package
-#	["removing" $conflicting_package $cp_version]	# old-package
-# The package is unpacked; all dependencies are at least Half-Installed,
-# previously been configured, and not removed. In some error situations,
-# dependencies may not be even fully unpacked.
-#
-# * postinst "triggered" "${triggers[*]}"
-# For trigger-only calls, i.e. if "configure" is not called.
-
 case $1 in
 configure)
 	getent passwd xrdp >/dev/null 2>&1 || adduser \
@@ -53,7 +33,11 @@ configure)
 		adduser xrdp ssl-cert
 	)
 
-	test -e /etc/xrdp/km-e0010412.ini || xrdp-genkeymap /etc/xrdp/km-e0010412.ini
+	if [ -n "$DISPLAY" ]; then
+		test -e /etc/xrdp/km-e0010412.ini || xrdp-genkeymap /etc/xrdp/km-e0010412.ini
+	else
+		echo "Skipping xrdp-genkeymap as no DISPLAY is set."
+	fi
 
 	;;
 
