@@ -32,7 +32,6 @@ purge)
 	rm -f /etc/pam.d/sesman
 	rm -f /var/log/sesman.log /var/log/xrdp.log /var/log/xrdp-sesman.log
 	rm -rf /etc/xrdp /run/xrdp
-	[ -f "/etc/xrdp/km-e0010412.ini" ] && rm -f /etc/xrdp/km-e0010412.ini
 
 	(deluser --system --quiet xrdp || :)
 	(delgroup --system --quiet xrdp || :)

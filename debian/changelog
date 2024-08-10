@@ -1,3 +1,9 @@
+xrdp (0.10.0-1hamonikr7) stable; urgency=medium
+
+  * Include km-e0010412.ini file
+
+  -- HamoniKR <pkg@hamonikr.org>  Sat, 10 Aug 2024 12:16:25 +0900
+
 xrdp (0.10.0-1hamonikr6) stable; urgency=medium
 
   * If there is no X, skip the xrdp-genkeymap command.

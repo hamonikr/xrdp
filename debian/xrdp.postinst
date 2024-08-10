@@ -32,13 +32,6 @@ configure)
 		ln -s /etc/ssl/private/ssl-cert-snakeoil.key /etc/xrdp/key.pem
 		adduser xrdp ssl-cert
 	)
-
-	if [ -n "$DISPLAY" ]; then
-		test -e /etc/xrdp/km-e0010412.ini || xrdp-genkeymap /etc/xrdp/km-e0010412.ini
-	else
-		echo "Skipping xrdp-genkeymap as no DISPLAY is set."
-	fi
-
 	;;
 
 abort-upgrade|abort-remove|abort-deconfigure)
